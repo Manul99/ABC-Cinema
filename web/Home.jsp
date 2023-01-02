@@ -36,7 +36,7 @@
                      </li>
                   
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">OFFERS</a>
+                        <a class="nav-link" aria-current="page" href="#">FOOD & BEVERAGE</a>
                     </li>
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">MOVIES</a>
