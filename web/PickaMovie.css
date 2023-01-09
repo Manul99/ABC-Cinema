@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 9, 2023, 12:34:30 AM
+    Author     : manul
+*/
+
+nav
+{
+    background:#5F0000;
+}
+
+body
+{
+    background:black;
+}
+
+table,th,td
+{
+    border:2px  solid maroon;
+}
+
+table
+{
+    width:20%;
+    height:50px;
+    background: black;
+}
+
+table tr td:empty
+{
+    width:50px;
+}
+
+
+table tr td
+{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+footer
+{
+    box-sizing: border-box;
+    position: absolute;
+    /*padding: 0px 110px 110px 110px;*/
+    
+    width: 99.9%;
+    
+    height:550px;
+            /* Height of the footer*/
+   
+    /*background: grey;*/
+ 
+    left: 1px;
+     /*top:2059px;*/
+    
+    background-image:url(filmreel.png);
+    background-blend-mode: lighten;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    border: 1px solid #000000;
+    background-color:#5F0000;
+    background-repeat:no-repeat;
+    background-position:fixed;
+    background-size:100%;
+    background-opacity:0.7;
+   
+}
+
+.bottom
+{
+    position:absolute;
+    width: 100%;
+    height: 20%;
+    background: #360404;
+    opacity:0.7;
+    bottom:auto;
+}
+
+.table1 .tr1 .td1:empty
+{
+    width:50px;
+}

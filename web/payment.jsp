@@ -55,11 +55,11 @@
             </div>
             </div>
              </nav>
-        
-        <section class="section1">
-            <h1>Payment Details</h1>
+        <br><br>
+               <h1>Payment Details</h1>
+               
             <div class="container">
-                
+                      
                 <form>
                     <br> 
                     
@@ -130,17 +130,36 @@
                    <input type="reset"class="btn btn-success"value="Cancel">
                    <input type="submit"class="btn btn-success"value="Pay">
                    <br><br>
+                   
                    <span>&#10003;</span><small>UnionPay SecurePay</small><img src="unionpay.jpg" width="20"height="15">
-              
-               
-
+                   
+                   <center><div id="paypal-button-container"></div></center>
+                  <script <script src="https://www.paypal.com/sdk/js?client-id=AZIesBjrCw94xdomBqGCClStm9iRbM6udsGE2nS1HCvBE2Buk8mfN0WhAr_pySWQRWxCKrRAtdYsVKpC"></script>
+                
+                    <script>
+                        paypal.Buttons({
+                            createOrder:function(data, actions){
+                                return actions.order.create({
+                                    purchase_units:[{
+                                            amount:{
+                                                value:'675.00'
+                                            }
+                                    }]
+                                })
+                            }
+                        }).render('#paypal-button-container')
+                    </script>
            
-                </form>
+                </form><br><br>
             </div>       
                 
+            <div>
+                
+                
                
-         </section>
-        <br><br>
+            </div> 
+         
+        <br><br><br>
         
         <footer>
             <br>

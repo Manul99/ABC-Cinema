@@ -17,7 +17,7 @@
        <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
-                <img src="ABC.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
+                <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
                 
              </a>
             <a class="navbar-brand" href="#"></a>
@@ -56,29 +56,35 @@
             </div>
         </nav>
         <br><br><br>
-    <center><div class="d-flex justify-content-center text-secondary">
-            <p class="h4 p-2 g-col-6">Pick a Movie</p>
-            <p class="h4 p-2 g-col-9 ">Your Details</p>
-            <p class="h4 p-2 g-col-9">Pick a Seat</p>
-            <p class="h4 p-2 g-col-9">Summary</p>
-        </div></center>
+  <br>
+        <ul class="nav justify-content-center">
+        <li class="nav-item">
+         <a class="nav-link active link-secondary" aria-current="page" href="#" style="color:">Pick a Movie</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link link-secondary" href="#">Your Details</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link link-light" href="#">Pick a Seat</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link disabled link-secondary" href="#" tabindex="-1" aria-disabled="true">Summary</a>
+        </li>
+        </ul>
     
     <h1 style="color:white">Pick a Seat</h1>
     
-    <!-- data retrieve part is here 
+        <%Cookie [] ck=request.getCookies();%>
+    <center> <p style="color:white"><%out.println(""+ck[2].getValue());%></p></center>
+    <center><p style="color:white"><%out.print(""+ck[1].getValue());out.print(", ");out.print(""+ck[3].getValue());%></p></center>
     
-           Movie name
-       H1 date and time 
-    
-    -->
     <section>
    <div class="movie-container d-flex justify-content-center">
-       <label>Pick a movie</label>
+       <label>Pick a movie type</label>
        <select id="movie">
-           <option value="675">Avatar:Way of Water</option>
-            <option value="675">Violent Night</option>
-            <option value="675">Devotion</option>
-             <option value="675">Strange World</option>
+           <option value="675">2D(Rs.675.00)</option>
+            <option value="1100">3D(Rs.1100.00)</option>
+            
                     
        </select>
    </div>
@@ -99,13 +105,13 @@
             </li>
             </ul>
         
-         <form method="post" action="">
+         <form method="post" action="Summary.jsp">
         <div class="container">
             
             <center><div class="screen"></div></center>
            
-            <div class="row d-flex justify-content-center">
-                <div class="seat" name="A1">A1</div>
+            <div class="row d-flex justify-content-center" name="seat" id="seat">
+                <div class="seat"value="A1" name="seat" id="seat">A1</div>
                 <div class="seat" name="A2">A2</div>
                 <div class="seat" name="A3">A3</div>
                 <div class="seat" name="A4">A4</div>
@@ -174,7 +180,7 @@
         </div>
         <center> <p name="movie" class="movie">Adult ticket = Rs 675.00</p></center>
         <center> <p class="text" style="color:white">
-        You have selected <span id="count">0</span> seat for a price of Rs.<span id="total">0</span>
+                You have selected <span id="count" name="count">0</span> seat for a price of Rs.<span id="total"><input type="text"value="0"name="total" id="total"></span>
             </p></center>
         <center><div> 
            <input type="reset" class="btn btn-danger me-4" value="Previous">
@@ -228,7 +234,7 @@
                 <center><p style="color:white">&copy;2022 Property & Finance and Investments Colombo(PVT)Ltd.All rights reserved. </p></center>
                 
             </div>
-               -->
+               
            
     </footer>
 

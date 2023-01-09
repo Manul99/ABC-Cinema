@@ -245,7 +245,7 @@
                 <center><p style="color:white">&copy;2022 Property & Finance and Investments Colombo(PVT)Ltd.All rights reserved. </p></center>
                 
             </div>
-               -->
+               
            
           </footer>
            <!--Footer section end -->
