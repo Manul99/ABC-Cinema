@@ -101,7 +101,7 @@
                     <tr>
                         <td class="heading">Movie</td>
                         <td></td>
-                        <td class="text"><%out.print(""+ck[2].getValue());%></td>
+                        <td class="text"><%out.print(""+ck[1].getValue());%></td>
                         <td></td>
                         
                     </tr>
@@ -110,7 +110,7 @@
                     
                         <td class="heading">Show time</td>
                         <td></td>
-                        <td class="text"><%out.print(""+ck[1].getValue());%></td>
+                        <td class="text"><%out.print(""+ck[2].getValue());%></td>
                         <td></td>
                     </tr>
                     <tr>

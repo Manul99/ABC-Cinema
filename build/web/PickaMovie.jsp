@@ -41,7 +41,7 @@
                         <a class="nav-link" aria-current="page" href="#" style="color:white">MOVIES</a>
                     </li>
                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" style="color:white">BUY  TICKETS</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" style="color:white">BUY  TICKETS</a>
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -133,8 +133,8 @@
                 <img src="wonderalla.png" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white">Movie Cheer with your near and dear</h5>
+                <div class="card-body"><br><br><br>
+                    <h5 class="card-title" style="color:white">Movie Cheer with your near and dear</h5><br>
                 <p class="card-text" style="color:white">Grab your loved ones this holiday season and go watching in a movie wonderland. Come to ABC Cinemas and share in the wonder of the holidays, the magic of the movies, and the memories for a lifetime..</p>
        
             </div>
@@ -146,11 +146,11 @@
              <center><div class="card mb-3 bg-dark" style="max-width: 1540px;">
             <div class="row g-0">
             <div class="col-md-4 d-flex flex-row-reverse">
-                <img src="collecti.png" class="img-fluid rounded-start " alt="...">
+                <img src="collecti.png" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white">Epic Collectibles Worth Fighting For</h5>
+            <div class="card-body"><br><br><br>
+                <h5 class="card-title" style="color:white">Epic Collectibles Worth Fighting For</h5><br>
                 <p class="card-text" style="color:white">Take a piece of Pandora home with you. Shop our online collection of AVATAR: THE WAY OF WATER fan merch, including apparel, McFarlane figurines, book, light-up bowl and cup set, and more!.</p>
        
             </div>
@@ -166,8 +166,8 @@
                 <img src="snack.jpg" class="img-fluid rounded-start " alt="...">
             </div>
             <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white">A Bundle Deal with All the Feels</h5>
+            <div class="card-body"><br><br><br>
+                <h5 class="card-title" style="color:white">A Bundle Deal with All the Feels</h5><br>
                 <p class="card-text" style="color:white">Holiday cheer is here with the Snack Pack! Bundle and save up to Rs.200 on a sharable combo of treats, including a large popcorn, two large drinks or ICEEs, and two candies! Limited time only.</p>
        
             </div>

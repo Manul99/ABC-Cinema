@@ -58,7 +58,7 @@
         <div class="container border border-danger">
             <center><h1 style="color:white">NOW SHOWING MOVIES</h1></center>
             <br>
-            <form>
+            <form action="updatemovie" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie ID</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie ID" name="id">
@@ -67,13 +67,14 @@
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie New Name</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Name" name="nname">
             </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie New image</label>
-                <input type="file" class="form-control" id="exampleFormControlInput1" name="nimage">
-            </div>
+            
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie New Hours</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New hours" name="nhours">
+            </div>
+             <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie New image</label>
+                <input type="file" class="form-control" id="exampleFormControlInput1" name="nimage">
             </div>
             <center><table>
                 <tr>
@@ -93,7 +94,7 @@
             <div class="upcoming border border-danger">
             <center><h1 style="color:white">UPCOMING MOVIES</h1></center>
             <br>
-            <form>
+            <form action="updateupcoming" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie ID</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie ID" name="id">

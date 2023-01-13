@@ -1,6 +1,6 @@
 <%-- 
-    Document   : PickaMovie
-    Created on : Jan 9, 2023, 12:32:41 AM
+    Document   : contact
+    Created on : Jan 10, 2023, 9:12:33 PM
     Author     : manul
 --%>
 
@@ -11,10 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="PickaMovie.css">
+        <link rel="stylesheet" href="contact.css">
     </head>
-    <body>
-        <!--Navigation bar -->
+      <!--Navigation bar -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
@@ -56,134 +55,39 @@
             </div>
             </div>
         </nav>
+      <br><br>
         <!--navigation bar end -->
-        <br>
-        <ul class="nav justify-content-center">
-        <li class="nav-item">
-         <a class="nav-link active link-light" aria-current="page" href="#" style="color:">Pick a Movie</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link link-secondary" href="#">Your Details</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link link-secondary" href="#">Pick a Seat</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link disabled link-secondary" href="#" tabindex="-1" aria-disabled="true">Summary</a>
-        </li>
-        </ul>
-        
-        <br><br>
         <section>
-            <h1 style="color:white">Pick a Movie</h1>
-            <br><br>
-            <form action="displayValues" method="get">
-            <center><table>
-                  <tr>
-                    <td>
-                        <select name="movie" id="movie">
-                            <option>Select a Movie</option>
-                            <option value="Avatar: The Way of Water">Avatar: The Way of Water</option>
-                            <option value="Black Panther: Wakanda Forever">Black Panther: Wakanda Forever</option>
-                            <option value="Black Adam">Black Adam</option>
-                            <option value="Violent Night">Violent Night</option>
-                            <option value="Strange World">Strange World</option>
-                            <option value="Devotion">Devotion</option>
-                        </select>
-                    </td> 
-                    <td></td>
-                    <td>
-                         <select name="date" id="date">
-                             <option>Select Date</option>
-                            <option value="sun,11th December">Mon,16th January</option>
-                            <option value="Mon,12th December">Tue,17th January</option>
-                            <option value="Tue,13th December">Wed,18th January</option>
-                            <option value="Wed,11th December">Tue,19th January</option>
-                            <option value="Thu,11th December">Fri,20th January</option>
-                        </select>
-                    </td>
-                    <td></td>
-                    <td>
-                        <select name="time" id="time">
-                            <option>Select  Time</option>
-                            <option value="10.30">10.30am</option>
-                            <option value="1.30">1.30pm</option>
-                             <option value="1.30">4.15pm</option>
-                              <option value="1.30">8.45pm</option>
-                           
-                        </select>
-                    </td>
-                </tr>
-              </table></center>
-            <br>
-            <center><div>
-               
-                    <td class="td1"><button type="reset" class="btn btn-danger">Cancel</button></td>
-                    
-                    <td class="td1"><button type="submit" class="btn btn-danger">Next</button></td>
-                
-                </div></center>
-            </form>
+            <h1 style="color:white">Contact Us</h1>
+            <br><br><br><br><br><br><br><br>
+            <div class="d-flex justify-content-center">
+                <div class="card text-bg-secondary mb-3 me-5" style="max-width: 25rem;height:13rem">
+                <div class="card-header">MARKETING & ADVERTISING</div>
+                <div class="card-body">
+                    <h5 class="card-title"><img src="call.png" width="30"height="30">&nbsp;0715876693-Colombo</h5><br>
+                    <p class="card-text"><img src="mail.png" width="30" height="30">&nbsp;colombo@abccinemas@gmail.com</p>
+                </div>
+                </div>
+                <div class="card text-bg-secondary mb-3 me-5" style="max-width: 25rem;;height:13rem">
+                <div class="card-header">THEATER CONTACT DETAILS</div>
+                <div class="card-body">
+                    <h5 class="card-title"><img src="call.png" width="30"height="30">&nbsp;0112811875-ABC Cinema</h5><br>
+                    <p class="card-text"><img src="mail.png" width="30" height="30">&nbsp;abccinemas@gmail.com</p>
+                </div>
+                </div>
+                <div class="card text-bg-secondary mb-3 me-5" style="max-width: 25rem;;height:13rem">
+                <div class="card-header">HELP DESK</div>
+                <div class="card-body">
+                    <h5 class="card-title"><img src="call.png" width="30"height="30">&nbsp;(09.00am-06.00pm Monday-Friday)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0112056089/0704469231</h5><br>
+                    <p class="card-text"><img src="mail.png" width="30" height="30">&nbsp;helpdesk@abccinemas.com</p>
+                </div>
+                </div>
+            </div>
         </section>
         <br><br><br>
-        <section>
-            <center><div class="card mb-3 bg-dark  justify-content-around" style="max-width: 1540px;">
-            <div class="row g-0">
-            <div class="col-md-4">
-                <img src="wonderalla.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body"><br><br><br>
-                    <h5 class="card-title" style="color:white">Movie Cheer with your near and dear</h5><br>
-                <p class="card-text" style="color:white">Grab your loved ones this holiday season and go watching in a movie wonderland. Come to ABC Cinemas and share in the wonder of the holidays, the magic of the movies, and the memories for a lifetime..</p>
-       
-            </div>
-            </div>
-            </div>
-                </div></center>
-            
-            <br><br>
-             <center><div class="card mb-3 bg-dark" style="max-width: 1540px;">
-            <div class="row g-0">
-            <div class="col-md-4 d-flex flex-row-reverse">
-                <img src="collecti.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-            <div class="card-body"><br><br><br>
-                <h5 class="card-title" style="color:white">Epic Collectibles Worth Fighting For</h5><br>
-                <p class="card-text" style="color:white">Take a piece of Pandora home with you. Shop our online collection of AVATAR: THE WAY OF WATER fan merch, including apparel, McFarlane figurines, book, light-up bowl and cup set, and more!.</p>
-       
-            </div>
-            </div>
-            </div>
-                </div></center>
-            
-            <br><br>
-            
-              <center><div class="card mb-3 bg-dark" style="max-width: 1540px;">
-            <div class="row g-0">
-            <div class="col-md-4 d-flex ">
-                <img src="snack.jpg" class="img-fluid rounded-start " alt="...">
-            </div>
-            <div class="col-md-8">
-            <div class="card-body"><br><br><br>
-                <h5 class="card-title" style="color:white">A Bundle Deal with All the Feels</h5><br>
-                <p class="card-text" style="color:white">Holiday cheer is here with the Snack Pack! Bundle and save up to Rs.200 on a sharable combo of treats, including a large popcorn, two large drinks or ICEEs, and two candies! Limited time only.</p>
-       
-            </div>
-            </div>
-            </div>
-                </div></center>
-            
-      
-            
-        </section>
         
-        <br>
         <footer>
-               
-               
-                  
+     
                    <div class="d-flex justify-content-lg-end" style="margin:17px">
                     <h4 class="text-muted"">FIND US ON GOOGLE PLAY AND APP STORE</h4><br>
                    </div>
@@ -229,7 +133,9 @@
                
            
           </footer>
-           <!--Footer section end -->
+    <body>
+        
+     
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

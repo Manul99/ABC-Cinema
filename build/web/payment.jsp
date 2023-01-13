@@ -12,6 +12,15 @@
         <title>ABC Cinema</title>
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet"href="payment.css">
+        
+         <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("PGkEY5dW-xgLaA_nz");
+        })();
+</script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg ">
@@ -60,23 +69,29 @@
                
             <div class="container">
                       
-                <form>
+                <form id="card-form">
                     <br> 
+                 <b><label for="name">First name and last name*</label><br></label></b>
                     
-                <b><label for="ccnum">Card number *</label><br></label></b>
+               <input type="text" class="form-control w-50" id="name" name="name"required>
+               <br>
+               <b><label for="email">Email *</label><br></label></b>
                     
-               <input type="text" class="form-control w-50" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+               <input type="email" class="form-control w-50" id="email" name="email" required><br>
+                <b><label for="card-number">Card number *</label><br></label></b>
+                    
+               <input type="text" class="form-control w-50" id="card-number" name="cardnumber" placeholder="1111-2222-3333-4444" pattern="[0-9]{16}"required>
                            
               <img src="visamaster.png" width="70" height="50">
                <br><br>
                <table>
                    <tr>
-                       <th>Expire Month</th>
-                       <th>Expire Year</th>
+                       <th><label for="expireation-date">Expire Month</label></th>
+                       <th><label for="expireation-year">Expire Year</label></th>
                    </tr>
                    <tr>
                        <td>
-                           <select name="expmonth">
+                           <select name="expmonth" id="expiration-date">
                                <option value="01">01</option>
                                <option value="02">02</option>
                                <option value="03">03</option>
@@ -93,17 +108,17 @@
                            </select>
                        </td>
                        <td>
-                           <select name="expyear">
+                           <select name="expyear" id="expiration-year">
                                <option value="23">23</option>
-                               <option value="23">24</option>
-                               <option value="23">25</option>
-                               <option value="23">26</option>
-                               <option value="23">27</option>
-                               <option value="23">28</option>
-                               <option value="23">29</option>
-                               <option value="23">30</option>
-                               <option value="23">31</option>
-                               <option value="23">32</option>
+                               <option value="24">24</option>
+                               <option value="25">25</option>
+                               <option value="26">26</option>
+                               <option value="27">27</option>
+                               <option value="28">28</option>
+                               <option value="29">29</option>
+                               <option value="30">30</option>
+                               <option value="31">31</option>
+                               <option value="32">32</option>
                                
                            </select>
                        </td>
@@ -111,10 +126,10 @@
                </table><br>
                <table>
                    <tr>
-                       <th><label>Card holder name</label></th>
+                       <th><label for="card-name">Card holder name</label></th>
                    </tr>
                    <tr>
-                       <td> <input type="text" id="cname" name="cardname"placeholder="Jhon perera"  class="form-control" required></td>
+                       <td> <input type="text" id="card-name" name="card-name"placeholder="Jhon perera"  class="form-control" required></td>
                    </tr>
                  </table>
                    <br>
@@ -123,12 +138,12 @@
                     <th><label  for="cvv">Security Code</label></th>
                    </tr>
                    <tr>
-                       <td> <input type="text" id="cvv" name="cvv" placeholder="352"required ><img src="pin.jpg"width="60" height="35">3 digits on back of your card</td>
+                       <td> <input type="text" id="cvv" name="cvv" placeholder="352" pattern="[0-9]{3}"required ><img src="pin.jpg"width="60" height="35">3 digits on back of your card</td>
                    </tr>
                    </table>
                    <br>
                    <input type="reset"class="btn btn-success"value="Cancel">
-                   <input type="submit"class="btn btn-success"value="Pay">
+                   <input type="button"class="btn btn-success"value="Pay" onclick="sendMail()">
                    <br><br>
                    
                    <span>&#10003;</span><small>UnionPay SecurePay</small><img src="unionpay.jpg" width="20"height="15">
@@ -150,6 +165,94 @@
                         }).render('#paypal-button-container')
                     </script>
            
+                    <script>
+                        import CryptoJS from "crypto-js";
+                        
+                        var cardForm=document.getElementById("card-form");
+                        
+                        cardForm.addEventListener("submit",function(event){
+                            event.preventDefault();
+                            encryptCardData();
+                            sendToServer();
+                        });
+                        
+                        function encryptCardData(){
+                            var cardNumber = document.getElementById("card-number").value;
+                            var expirationDate = document.getElementById("expiration-date").value;
+                            var expirationYear=document.getElementById("expiration-year").value;
+                            var cardName=document.getElementById("card-name").value;
+                            var cvv = document.getElementById("cvv").value;
+
+                            var cardData = {
+                                number: cardNumber,
+                                expirationDate: expirationDate,
+                                expirationYear:expirationYear,
+                                name:cardName,
+                                cvv: cvv
+                        };
+                        
+                        var key = CryptoJS.enc.Utf8.parse("YOUR_SECRET_KEY");
+                        var iv = CryptoJS.enc.Utf8.parse("YOUR_INITIALIZATION_VECTOR");
+                        var cardDataJson = JSON.stringify(cardData);
+                        var encryptedCardData = CryptoJS.AES.encrypt(cardDataJson, key, {
+                            iv: iv,
+                            mode: CryptoJS.mode.CBC,
+                            padding: CryptoJS.pad.Pkcs7
+                        });
+                        return encryptedCardData.toString();
+                        }
+                        
+                        function sendToserver(){
+                             var encryptedCardData = encryptCardData();
+
+                        // Send encrypted data to server
+                        fetch("/process-payment", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ encryptedCardData: encryptedCardData })
+                        })
+                        .then(response => {
+                            if(response.status ===200){
+                                window.location.href='';
+                            }
+                        })
+                        .then(data => {
+                            // Do something with the response from the server
+                        console.log(data);
+                        })
+                        .catch(error => {
+                            // Handle errors
+                        console.error(error);
+                        });
+                        }
+                    </script>
+                    
+                    <script>
+                        function sendMail(){
+                                var params={
+                                    name:document.getElementById("name").value,
+                                    email:document.getElementById("email").value
+         
+                            };
+     
+                            const serviceID="service_k3go53o";
+                            const templateID="template_cbmy2hd";
+
+                                emailjs.send(serviceID,templateID,params)
+                                       .then(function(response){
+                                            document.getElementById("name").value="";
+                                            document.getElementById("email").value="";
+                                            console.log('Success!',response.status,response.text);
+                                        },function(error){
+                                            console.log('Failed',error);
+                                        });
+          
+        
+        
+                            }
+                    </script>
                 </form><br><br>
             </div>       
                 

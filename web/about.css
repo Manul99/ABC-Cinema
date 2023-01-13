@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Jan 9, 2023, 12:34:30 AM
+    Created on : Jan 11, 2023, 1:19:45 AM
     Author     : manul
 */
 
@@ -15,31 +15,23 @@ nav
 
 body
 {
-    background:black;
-}
-
-table,th,td
-{
-    border:2px  solid maroon;
-}
-
-table
-{
-    width:20%;
-    height:50px;
     background: black;
 }
 
-table tr td:empty
+.vision
 {
-    width:50px;
+  
+
+  left:420px;
+  top: 250px;
 }
 
-
-table tr td
+.mission
 {
-    padding-top:10px;
-    padding-bottom:10px;
+ 
+  height:270px;
+  left:1200px;
+  top: 250px;
 }
 
 footer
@@ -79,19 +71,4 @@ footer
     background: #360404;
     opacity:0.7;
     bottom:auto;
-}
-
-.table1 .tr1 .td1:empty
-{
-    width:50px;
-}
-
-#right
-{
-    width: 400px;  
-height: 150px;  
-border: 5px solid red;  
-background-color: lightgreen;  
- object-fit: none;  
-object-position: right top;  
 }

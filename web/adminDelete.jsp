@@ -59,7 +59,7 @@
             <br><br><br><br>
             <center><h1 style="color:white">NOW SHOWING MOVIES</h1></center>
            
-            <form action="" method="post">
+            <form action="moivedelete" method="post">
                 <br>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie ID</label>
@@ -86,7 +86,7 @@
             <center><h1 style="color:white">UPCOMING MOVIES</h1></center>
             
            <!-- Upcoming database data need to include --> 
-            <form action="" method="post">
+            <form action="deleteupcoming" method="post">
                 <br>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie ID</label>

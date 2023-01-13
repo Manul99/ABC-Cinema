@@ -75,8 +75,8 @@
     <h1 style="color:white">Pick a Seat</h1>
     
         <%Cookie [] ck=request.getCookies();%>
-    <center> <p style="color:white"><%out.println(""+ck[2].getValue());%></p></center>
-    <center><p style="color:white"><%out.print(""+ck[1].getValue());out.print(", ");out.print(""+ck[3].getValue());%></p></center>
+    <center> <p style="color:white"><%out.println(""+ck[1].getValue());%></p></center>
+    <center><p style="color:white"><%out.print(""+ck[2].getValue());out.print(", ");out.print(""+ck[3].getValue());%></p></center>
     
     <section>
    <div class="movie-container d-flex justify-content-center">
@@ -178,9 +178,9 @@
             </div>
             
         </div>
-        <center> <p name="movie" class="movie">Adult ticket = Rs 675.00</p></center>
+        
         <center> <p class="text" style="color:white">
-                You have selected <span id="count" name="count">0</span> seat for a price of Rs.<span id="total"><input type="text"value="0"name="total" id="total"></span>
+                You have selected <span id="count" name="count"><input type="text"value="0"name="count" id="count"></span> seat for a price of Rs.<span id="total"><input type="text"value="0"name="total" id="total"></span>
             </p></center>
         <center><div> 
            <input type="reset" class="btn btn-danger me-4" value="Previous">

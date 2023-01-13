@@ -58,7 +58,7 @@
         <div class="container border border-danger">
             <center><h1 style="color:white">NOW SHOWING MOVIES</h1></center>
             <br>
-            <form>
+            <form action="moviedatabase" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie ID</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie ID" name="id">
@@ -68,12 +68,12 @@
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie Name" name="name">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie image</label>
-                <input type="file" class="form-control" id="exampleFormControlInput1" name="image">
-            </div>
-            <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie Hours</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie hours" name="hours">
+            </div>
+               <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie image</label>
+                <input type="file" class="form-control" id="exampleFormControlInput1" name="photo">
             </div>
             <center><table>
                 <tr>
@@ -93,7 +93,7 @@
             <div class="upcoming border border-danger">
             <center><h1 style="color:white">UPCOMING MOVIES</h1></center>
             <br>
-            <form>
+            <form action="upcomingdatabase" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie ID</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie ID" name="id">
@@ -104,7 +104,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="color:white">Movie image</label>
-                <input type="file" class="form-control" id="exampleFormControlInput1" name="image">
+                <input type="file" class="form-control" id="exampleFormControlInput1" name="photo">
             </div>
             <center><table>
                 <tr>

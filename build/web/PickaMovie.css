@@ -85,3 +85,13 @@ footer
 {
     width:50px;
 }
+
+#right
+{
+    width: 400px;  
+height: 150px;  
+border: 5px solid red;  
+background-color: lightgreen;  
+ object-fit: none;  
+object-position: right top;  
+}

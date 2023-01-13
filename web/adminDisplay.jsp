@@ -58,10 +58,10 @@
         <section>
                <center><h1 style="color:white">Movie Database</h1></center>
             <%
-              String id=request.getParameter("id");
+              
               String driverName="com.mysql.jdbc.Driver";
               String connectionUrl="jdbc:mysql://loclhost:3306";
-              String dbName="";
+              String dbName="movie";
               String userId="root";
               String password="";
               
@@ -86,8 +86,8 @@
             <tr bgcolor="#5F0000">
             <td style="color:white"><b>Movie id</b></td>
             <td style="color:white"><b>Movie name</b></td>
-            <td style="color:white"><b>Image</b></td>
             <td style="color:white"><b>Hours</b></td>
+            <td style="color:white"><b>Image</b></td>
             </tr>
             <%
               try
@@ -103,9 +103,9 @@
                    <tr bgcolor="#DEB887">
 
                     <td style="color:white"><%=resultSet.getString("id") %></td>
-                    <td style="color:white"><%=resultSet.getString("mName") %></td>
-                    <td style="color:white"><%=resultSet.getString("image") %></td>
+                    <td style="color:white"><%=resultSet.getString("name") %></td>
                     <td style="color:white"><%=resultSet.getString("hours") %></td>
+                    <td style="color:white"><%=resultSet.getString("photo") %></td>
               
 
                     </tr>
@@ -148,8 +148,8 @@
                    <tr bgcolor="#DEB887">
 
                     <td style="color:white"><%=resultSet.getString("id") %></td>
-                    <td style="color:white"><%=resultSet.getString("mName") %></td>
-                    <td style="color:white"><%=resultSet.getString("image") %></td>
+                    <td style="color:white"><%=resultSet.getString("name") %></td>
+                    <td style="color:white"><%=resultSet.getString("photo") %></td>
                   
               
 
