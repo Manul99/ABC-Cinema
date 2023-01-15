@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="about.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
                 <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
@@ -33,9 +33,7 @@
                        <a class="nav-link " aria-current="page" href="#" style="color:white">ABOUT US</a>
                      </li>
                   
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" style="color:white">FOOD & BEVERAGE</a>
-                    </li>
+
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"style="color:white">MOVIES</a>
                     </li>
@@ -131,7 +129,7 @@
                 <center><p style="color:white">&copy;2022 Property & Finance and Investments Colombo(PVT)Ltd.All rights reserved. </p></center>
                 
             </div>
-               
+             
            
           </footer>
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

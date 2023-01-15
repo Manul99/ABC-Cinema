@@ -15,7 +15,7 @@
     </head>
     <body>
         <!--Navigation bar -->
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
                 <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
@@ -34,9 +34,6 @@
                        <a class="nav-link " aria-current="page" href="#" style="color:white">ABOUT US</a>
                      </li>
                   
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" style="color:white">FOOD & BEVERAGE</a>
-                    </li>
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#" style="color:white">MOVIES</a>
                     </li>
@@ -49,7 +46,7 @@
                         
                     </form>
                      
-                     <a class="nav-link" aria-current="page" href="#" style="color:white">SIGN IN</a>
+                    
                     
                   
                     
@@ -57,7 +54,7 @@
             </div>
         </nav>
         <!--navigation bar end -->
-        <br>
+        <br><br><br><br><br>
         <ul class="nav justify-content-center">
         <li class="nav-item">
          <a class="nav-link active link-light" aria-current="page" href="#" style="color:">Pick a Movie</a>

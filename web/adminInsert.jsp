@@ -56,7 +56,7 @@
             <center><h1 style="color:white">Insert data</h1></center>
     
         <div class="container border border-danger">
-            <center><h1 style="color:white">NOW SHOWING MOVIES</h1></center>
+            <center><h1 style="color:white;">NOW SHOWING MOVIES</h1></center>
             <br>
             <form action="moviedatabase" method="post" enctype="multipart/form-data">
             <div class="mb-3">

@@ -16,10 +16,10 @@
     </head>
     <body>
         <!--Navigation bar -->
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
-                <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
+                <img src="ABC3.jpg" alt="Logo" width=70" height="70" class="d-inline-block align-text-top" font-family="">
                 
              </a>
             <a class="navbar-brand" href="#"></a>
@@ -31,16 +31,16 @@
                      <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#" style="color:white">HOME</a>
                     </li>
+                    <li></li><li>
                     <li class="nav-item">
                        <a class="nav-link " aria-current="page" href="http://localhost:8084/ABC_Cinema/about.jsp">ABOUT US</a>
                      </li>
                   
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">FOOD & BEVERAGE</a>
-                    </li>
+                     <li></li>
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="">MOVIES</a>
                     </li>
+                    <li></li>
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp">BUY  TICKETS</a>
                     </li>
@@ -50,7 +50,7 @@
                         
                     </form>
                      
-                     <a class="nav-link" aria-current="page" href="#">SIGN IN</a>
+                   
                     
                   
                     
@@ -93,7 +93,7 @@
   </div>
   <div class="col ps-5 mh-25">
     <div class="card">
-      <img src="blaca.jpg" class="card-img-top mw-6" alt="...">
+      <img src="blaca.jpg" class="card-img-top mw-16" alt="...">
       <div class="card-body bg-dark">
          <center><a href="#" class="btn btn-secondary">BUY TICKETS</a></center>
       </div>
@@ -209,12 +209,12 @@
                <div class="d-flex justify-content-lg-end">
                  
                 <img src="newgoo.png" class="rounded float-start" alt="..." style="max-width:10%; margin:0% 4%;opacity:0.7"><br>
-                <img src="newapp.png" class="rounded float-start" alt="..." style="max-width:10%;opacity:0.7">
+                <img src="newapp.png" class="rounded float-start" alt="..." style="max-width:10%;opacity:0.7"><br>
               
                 </div>
                    <div class="d-flex justify-content-lg-end">
                          <img src="fbinsta.png" class="rounded float-start" alt="..." style="max-width:5%; margin:20px 380px 0px 0px">
-                   </div>
+                   </div><br>
                     
                  <div class="d-flex justify-content-lg-end" style="margin:10px 160px 0px 0px">
                      <h4 class="text-muted">SUBSCRIBE FOR NEWSLETTER</h4><br>
@@ -223,7 +223,7 @@
                   <div class="d-flex justify-content-lg-end" style="margin:10px 160px 0px 0px">
                     
                      <input type="text" class="form-control" id="inputPassword2" placeholder="ENTER EMAIL" style="width:17%;background-color:maroon;opacity:0.7">
-                 </div>
+                  </div><br>
                     
 
                     <div position-relative>              
@@ -231,9 +231,9 @@
                         <h1 style="color:white">ABC CINEMA</h1><br>
                         <h4><a href="#" class="link-light">HOME</a></h4><br>
                         <h4><a href="http://localhost:8084/ABC_Cinema/about.jsp" class="link-light">ABOUT US</a></h4><br>
-                        <h4><a href="#" class="link-light">FOOD & BEVERAGE</a></h4><br>
                         <h4><a href="#" class="link-light">MOVIES</a></h4><br>
                         <h4><a href="#" class="link-light">BUY TICKETS</a></h4><br>
+                        <h4><a href="#" class="link-light">FEEDBACK</a></h4><br>
                         <h4><a href="#" class="link-light">CONTACT US</a></h4><br>
                     </div>
                     </div>

@@ -14,7 +14,7 @@
          <link rel="stylesheet" href="Summary.css">
     </head>
     <body style="background:black">
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
                 <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
@@ -33,9 +33,7 @@
                        <a class="nav-link " aria-current="page" href="#" style="color:white">ABOUT US</a>
                      </li>
                   
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" style="color:white">FOOD & BEVERAGE</a>
-                    </li>
+                    
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"style="color:white">MOVIES</a>
                     </li>
@@ -55,7 +53,7 @@
             </div>
             </div>
         </nav>
-        <br><br>
+        <br><br><br><br><br>
      <ul class="nav justify-content-center">
         <li class="nav-item">
          <a class="nav-link active link-secondary" aria-current="page" href="#" style="color:">Pick a Movie</a>
@@ -70,7 +68,7 @@
         <a class="nav-link disabled link-light" href="#" tabindex="-1" aria-disabled="true">Summary</a>
         </li>
         </ul>
-        <br><br><br>
+        <br><br>
     
     <h1 style="color:white">Summary</h1>
     <br><br><br><br>
@@ -154,21 +152,21 @@
                             <!--ticket count should come to here -->
                         <td class="heading">Tickets</td>
                         <td></td>
-                        <td class="text"><%out.print(""+ticket);%></td>
+                        <td class="text">2</td>
                         <td></td>
                         
                     </tr>
                     <tr>
                         <td class="heading">Seats</td>
                         <td></td>
-                        <td class="text"><%out.print(""+seat);%></td>
+                        <td class="text">D5,D6</td>
                         <td></td>
                         
                     </tr>
                     <tr>
                         <td class="heading">Ticket Price</td>
                         <td></td>
-                        <td class="text"><%out.print(""+price);%></td>
+                        <td class="text">Rs.1350.00</td>
                         <td></td>
                         
                     </tr>
@@ -181,7 +179,7 @@
                         <tr>
                         <td class="heading">Total</td>
                         <td></td>
-                        <td class="text">LKR &nbsp;<%out.print(""+total);%>.00</td>
+                        <td class="text">LKR &nbsp;1350.00</td>
                         <td></td>
                         
                     </tr>

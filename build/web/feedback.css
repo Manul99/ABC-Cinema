@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 13, 2023, 10:20:23 PM
+    Author     : manul
+*/
+
+nav
+{
+    background-color:#5F0000;
+}
+
+table tr td:empty
+{
+    width:100px;
+}
+
+.container
+{
+   position: absolute;
+  width: 45%;
+  height: 500px;
+  left:27%;
+  top: 35%;
+  right:80%;
+  border:2px solid maroon;
+  background:linear-gradient(179.99deg, rgba(84, 72, 72, 0) -14.88%, #000000 29.84%);
+  margin:0% 30% 30% 0%;
+}
+
+body
+{
+    background:maroon;
+}

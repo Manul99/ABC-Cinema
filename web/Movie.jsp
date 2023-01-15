@@ -14,7 +14,7 @@
         <link rel="stylesheet"href="Movie.css">
     </head>
     <body>
-         <nav class="navbar navbar-expand-lg ">
+         <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
                 <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
@@ -32,10 +32,7 @@
                     <li class="nav-item">
                        <a class="nav-link " aria-current="page" href="#" style="color:white">ABOUT US</a>
                      </li>
-                  
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" style="color:white">FOOD & BEVERAGE</a>
-                    </li>
+              
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#" style="color:white">MOVIES</a>
                     </li>
@@ -48,14 +45,14 @@
                         
                     </form>
                      
-                     <a class="nav-link" aria-current="page" href="#" style="color:white">SIGN IN</a>
+                     
                     
                   
                     
             </div>
             </div>
         </nav>
-        <br><br>
+        <br><br><br><br><br>
         <section>
             
         <h1 style="color:white">NOW SHOING</h1>
@@ -66,10 +63,10 @@
                 <div class="inner">
                     <img src="blackadam.jpg" class="card-img-top mh-25" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">BLACK ADAM</h5>
-                    <p class="card-text">2H 4min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title"style="color:white">BLACK ADAM</h5>
+                    <p class="card-text"style="color:white">2H 4min</p>
+                    <p class="card-text"style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -77,12 +74,12 @@
                    <div class="col ps-2 pr-3" style="padding: 15">
                 <div class="card">
                 <div class="inner">
-                    <img src="bla12.jpg" class="card-img-top mh-25" alt="..." style="height:338px">
+                    <img src="bla12.jpg" class="card-img-top mh-25" alt="..." style="height:334px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">BLACK PANTHER:WAKANDA FOREVER</h5>
-                    <p class="card-text">2H 4min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title"style="color:white">BLACK PANTHER:WAKANDA FOREVER</h5>
+                    <p class="card-text"style="color:white">2H 4min</p>
+                    <p class="card-text"style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -92,10 +89,10 @@
                 <div class="inner">
                     <img src="violent.jpg" class="card-img-top mh-25" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">VIOLENT NIGHT</h5>
-                    <p class="card-text">1H 40min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title" style="color:white">VIOLENT NIGHT</h5>
+                    <p class="card-text" style="color:white">1H 40min</p>
+                    <p class="card-text"style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -105,10 +102,10 @@
                 <div class="inner">
                     <img src="strange.jpg" class="card-img-top mh-25" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">STRANGE WORLD</h5>
-                    <p class="card-text">1H 40min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title" style="color:white">STRANGE WORLD</h5>
+                    <p class="card-text" style="color:white">1H 40min</p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -118,10 +115,10 @@
                 <div class="inner">
                     <img src="Devotion.jpg" class="card-img-top mh-30" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">DEVOTION</h5>
-                    <p class="card-text">2H 4min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title" style="color:white">DEVOTION</h5>
+                    <p class="card-text" style="color:white">2H 4min</p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -135,10 +132,10 @@
                 <div class="inner">
                     <img src="action.jpg" class="card-img-top mh-25" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary" style="padding: 15">
-                    <h5 class="card-title">AN ACTION HERO</h5>
-                    <p class="card-text">2H </p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark" style="padding: 15">
+                    <h5 class="card-title"style="color:white">AN ACTION HERO</h5>
+                    <p class="card-text" style="color:white">2H </p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -148,10 +145,10 @@
                 <div class="inner">
                     <img src="drishyam2.png" class="card-img-top mh-25" alt="..." style="height:347px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">DRISHYAM 2</h5>
-                    <p class="card-text">2H 30min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title" style="color:white">DRISHYAM 2</h5>
+                    <p class="card-text"style="color:white">2H 30min</p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -161,10 +158,10 @@
                 <div class="inner">
                     <img src="jurasic.jpg" class="card-img-top mh-25" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">JURASIC WORLD:DOMINION</h5>
-                    <p class="card-text">2H 40min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title"style="color:white">JURASIC WORLD:DOMINION</h5>
+                    <p class="card-text" style="color:white">2H 40min</p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -172,12 +169,12 @@
                    <div class="col ps-3 pr-5" style="padding: 15">
                 <div class="card">
                 <div class="inner">
-                    <img src="dance.jpg" class="card-img-top mh-25" alt="..." style="height:345px">
+                    <img src="dance.jpg" class="card-img-top mh-25" alt="..." style="height:337px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">I WANNA DANCE WITH SOMEBODY</h5>
-                    <p class="card-text">2H 10min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title" style="color:white">I WANNA DANCE WITH SOMEBODY</h5>
+                    <p class="card-text" style="color:white">2H 10min</p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -187,10 +184,10 @@
                 <div class="inner">
                     <img src="strange3d.png" class="card-img-top mh-30" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
-                    <h5 class="card-title">STRANGE WORLD(3D)</h5>
-                    <p class="card-text">1H 40min</p>
-                    <p class="card-text">NOW SCREENING</p>
+                <div class="card-body bg-dark">
+                    <h5 class="card-title" style="color:white">STRANGE WORLD(3D)</h5>
+                    <p class="card-text" style="color:white">1H 40min</p>
+                    <p class="card-text" style="color:white">NOW SCREENING</p>
                         <a href="" class="btn btn-primary">BUY TICKETS</a>
                 </div>
                 </div>
@@ -207,7 +204,7 @@
                 <div class="inner">
                     <img src="Avatar.jpg" class="card-img-top mh-25" alt="..." style="height:375px">
                 </div>
-                <div class="card-body bg-secondary">
+                <div class="card card-body bg-primary">
                     <h5 class="card-title">AVATAR:THE WAY OF WATER</h5>
                     <p class="card-text">IN CINEMAS 16 TH DECEMBER</p>
                    
@@ -219,7 +216,7 @@
                 <div class="inner">
                     <img src="babylon.jpg" class="card-img-top mh-25" alt="..." style="height:375px">
                 </div>
-                <div class="card-body bg-secondary">
+                <div class="card-body bg-primary">
                     <h5 class="card-title">BABYLON</h5>
                     <p class="card-text">IN CINEMAS 7TH JANUARY</p>
                 </div>
@@ -230,7 +227,7 @@
                 <div class="inner">
                     <img src="quantam.jpg" class="card-img-top mh-25" alt="..." style="height:375px">
                 </div>
-                <div class="card-body bg-secondary">
+                <div class="card-body bg-primary">
                     <h5 class="card-title">QUANTUMANIA</h5>
                      <p class="card-text">IN CINEMAS 17TH FEBRUARY</p>
                 </div>
@@ -241,7 +238,7 @@
                 <div class="inner">
                     <img src="puss.jpg" class="card-img-top mh-25" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
+                <div class="card-body bg-primary">
                     <h5 class="card-title">PUSS IN BOOT: THE LAST WISH</h5>
                        <p class="card-text">IN CINEMAS 16TH DECEMBER</p>
                 </div>
@@ -252,7 +249,7 @@
                 <div class="inner">
                     <img src="operation.jpg" class="card-img-top mh-30" alt="..." style="height:350px">
                 </div>
-                <div class="card-body bg-secondary">
+                <div class="card-body bg-primary">
                     <h5 class="card-title">OPERATION FORTUNE RUSE DE GUERRE</h5>
                     <p class="card-text">IN CINEMAS 6TH JANUARY</p>
                 </div>
@@ -293,9 +290,9 @@
                         <h1 style="color:white">ABC CINEMA</h1><br>
                         <h4><a href="#" class="link-light">HOME</a></h4><br>
                         <h4><a href="#" class="link-light">ABOUT US</a></h4><br>
-                        <h4><a href="#" class="link-light">OFFERS</a></h4><br>
                         <h4><a href="#" class="link-light">MOVIES</a></h4><br>
                         <h4><a href="#" class="link-light">BUY TICKETS</a></h4><br>
+                        <h4><a href="#" class="link-light">FEEDBACK</a></h4><br>
                         <h4><a href="#" class="link-light">CONTACT US</a></h4><br>
                     </div>
                     </div>

@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="Selectseat.css">
     </head>
     <body>
-       <nav class="navbar navbar-expand-lg ">
+       <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
                 <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
@@ -33,9 +33,7 @@
                        <a class="nav-link " aria-current="page" href="#">ABOUT US</a>
                      </li>
                   
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">FOOD & BEVERAGE</a>
-                    </li>
+                    
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">MOVIES</a>
                     </li>
@@ -75,8 +73,8 @@
     <h1 style="color:white">Pick a Seat</h1>
     
         <%Cookie [] ck=request.getCookies();%>
-    <center> <p style="color:white"><%out.println(""+ck[1].getValue());%></p></center>
-    <center><p style="color:white"><%out.print(""+ck[2].getValue());out.print(", ");out.print(""+ck[3].getValue());%></p></center>
+    <center> <p style="color:white"><%out.print(""+ck[1].getValue());%></p></center>
+    <center><p style="color:white"><%out.print(""+ck[2].getValue());out.print(""+ck[3].getValue());%></p></center>
     
     <section>
    <div class="movie-container d-flex justify-content-center">
@@ -111,7 +109,7 @@
             <center><div class="screen"></div></center>
            
             <div class="row d-flex justify-content-center" name="seat" id="seat">
-                <div class="seat"value="A1" name="seat" id="seat">A1</div>
+                <button class="seat">A1</button>
                 <div class="seat" name="A2">A2</div>
                 <div class="seat" name="A3">A3</div>
                 <div class="seat" name="A4">A4</div>
@@ -180,7 +178,7 @@
         </div>
         
         <center> <p class="text" style="color:white">
-                You have selected <span id="count" name="count"><input type="text"value="0"name="count" id="count"></span> seat for a price of Rs.<span id="total"><input type="text"value="0"name="total" id="total"></span>
+                You have selected <span id="count" name="count">0</span> seat for a price of Rs.<span id="total">0</span>
             </p></center>
         <center><div> 
            <input type="reset" class="btn btn-danger me-4" value="Previous">
@@ -220,7 +218,6 @@
                         <h1 style="color:white">ABC CINEMA</h1><br>
                         <h4><a href="#" class="link-light">HOME</a></h4><br>
                         <h4><a href="#" class="link-light">ABOUT US</a></h4><br>
-                        <h4><a href="#" class="link-light">OFFERS</a></h4><br>
                         <h4><a href="#" class="link-light">MOVIES</a></h4><br>
                         <h4><a href="#" class="link-light">BUY TICKETS</a></h4><br>
                         <h4><a href="#" class="link-light">CONTACT US</a></h4><br>
