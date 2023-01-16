@@ -1,0 +1,18 @@
+SMAP
+adminfeedback_jsp.java
+JSP
+*S JSP
+*F
++ 0 adminfeedback.jsp
+adminfeedback.jsp
+*L
+5,141:48
+146,21:190
+166,54:211
+220,3:265,3
+223,2:274
+225,2:276,3
+227,9:282
+236,5:292
+240,63:297
+*E

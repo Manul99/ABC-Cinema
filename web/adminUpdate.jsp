@@ -40,6 +40,9 @@
           <li class="nav-item">
             <a class="nav-link" href="http://localhost:8084/ABC_Cinema/adminDelete.jsp" style="color:white">Delete Data</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8084/ABC_Cinema/adminfeedback.jsp" style="color:white">Feedbacks</a>
+          </li>
           
         </ul>
         

@@ -19,7 +19,7 @@
         <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
-                <img src="ABC3.jpg" alt="Logo" width=70" height="70" class="d-inline-block align-text-top" font-family="">
+                <img src="ABC3.jpg" alt="Logo" width=60" height="60" class="d-inline-block align-text-top" font-family="">
                 
              </a>
             <a class="navbar-brand" href="#"></a>
@@ -29,7 +29,7 @@
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <ul class="nav justify-content-center me-auto  mb-2 mb-lg-0 ">
                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color:white">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost:8084/ABC_Cinema/Home.jsp" style="color:white">HOME</a>
                     </li>
                     <li></li><li>
                     <li class="nav-item">
@@ -38,7 +38,7 @@
                   
                      <li></li>
                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">MOVIES</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/Movie.jsp">MOVIES</a>
                     </li>
                     <li></li>
                        <li class="nav-item">
@@ -87,7 +87,7 @@
     <div class="card">
       <img src="bla12.jpg" class="card-img-top mh-25" alt="...">
       <div class="card-body bg-dark">
-          <center> <a href="#" class="btn btn-secondary">BUY TICKETS</a></center>
+          <center> <a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="btn btn-secondary">BUY TICKETS</a></center>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@
     <div class="card">
       <img src="blaca.jpg" class="card-img-top mw-16" alt="...">
       <div class="card-body bg-dark">
-         <center><a href="#" class="btn btn-secondary">BUY TICKETS</a></center>
+         <center><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="btn btn-secondary">BUY TICKETS</a></center>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@
     <div class="card">
       <img src="Devotion.jpg" class="card-img-top mw-15" alt="...">
       <div class="card-body bg-dark">
-          <center><a href="#" class="btn btn-secondary">BUY TICKETS</a></center>
+          <center><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="btn btn-secondary">BUY TICKETS</a></center>
       </div>
     </div>
   </div>
@@ -111,7 +111,7 @@
     <div class="card">
       <img src="violent.jpg" class="card-img-top ml-15" alt="...">
       <div class="card-body bg-dark">
-        <center><a href="#" class="btn btn-secondary">BUY TICKETS</a></center>
+        <center><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="btn btn-secondary">BUY TICKETS</a></center>
       </div>
     </div>
   </div>
@@ -119,7 +119,7 @@
     <div class="card">
       <img src="strang22.jpg" class="card-img-top mw-10" alt="...">
       <div class="card-body bg-dark">
-          <center><a href="#" class="btn btn-secondary">BUY TICKETS</a></center>
+          <center><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="btn btn-secondary">BUY TICKETS</a></center>
       </div>
     </div>
   </div>
@@ -184,7 +184,7 @@
    <div class="col ps-7">
     <div class="card">
         <div class="inner">
-            <img src="operation.jpg" class="card-img-top mw-10" alt="..." style="height:460px">
+            <img src="operation.jpg" class="card-img-top mw-10" alt="..." style="height:455px">
         </div>
       <div class="card-body bg-primary">
             <h5 class="card-title">OEPRATION FORTUNE RUSE DE GUERRE</h5>
@@ -229,12 +229,12 @@
                     <div position-relative>              
                     <div class="position-absolute top-0 start-0">
                         <h1 style="color:white">ABC CINEMA</h1><br>
-                        <h4><a href="#" class="link-light">HOME</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/Home.jsp" class="link-light">HOME</a></h4><br>
                         <h4><a href="http://localhost:8084/ABC_Cinema/about.jsp" class="link-light">ABOUT US</a></h4><br>
-                        <h4><a href="#" class="link-light">MOVIES</a></h4><br>
-                        <h4><a href="#" class="link-light">BUY TICKETS</a></h4><br>
-                        <h4><a href="#" class="link-light">FEEDBACK</a></h4><br>
-                        <h4><a href="#" class="link-light">CONTACT US</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/Movie.jsp" class="link-light">MOVIES</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="link-light">BUY TICKETS</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/feedback.jsp" class="link-light">FEEDBACK</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="link-light">CONTACT US</a></h4><br>
                     </div>
                     </div>
                <br><br><br><br><br><br>

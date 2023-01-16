@@ -36,18 +36,18 @@
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <ul class="nav justify-content-center me-auto  mb-2 mb-lg-0 ">
                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color:white">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost:8084/ABC_Cinema/Home.jsp" style="color:white">HOME</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link " aria-current="page" href="#"style="color:white">ABOUT US</a>
+                       <a class="nav-link " aria-current="page" href="http://localhost:8084/ABC_Cinema/about.jsp"style="color:white">ABOUT US</a>
                      </li>
                   
                     
                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"style="color:white">MOVIES</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/Movie.jsp"style="color:white">MOVIES</a>
                     </li>
                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"style="color:white">BUY  TICKETS</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp"style="color:white">BUY  TICKETS</a>
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -55,7 +55,7 @@
                         
                     </form>
                      
-                     <a class="nav-link" aria-current="page" href="#"style="color:white">SIGN IN</a>
+                     
                     
                   
                     

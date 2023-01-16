@@ -27,18 +27,18 @@
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <ul class="nav justify-content-center me-auto  mb-2 mb-lg-0 ">
                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color:white">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost:8084/ABC_Cinema/Home.jsp" style="color:white">HOME</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link " aria-current="page" href="#">ABOUT US</a>
+                       <a class="nav-link " aria-current="page" href="http://localhost:8084/ABC_Cinema/about.jsp">ABOUT US</a>
                      </li>
                   
                     
                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">MOVIES</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/Movie.jsp">MOVIES</a>
                     </li>
                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">BUY  TICKETS</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp">BUY  TICKETS</a>
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -109,7 +109,7 @@
             <center><div class="screen"></div></center>
            
             <div class="row d-flex justify-content-center" name="seat" id="seat">
-                <button class="seat">A1</button>
+                <div class="seat"name="A2">A1</div>
                 <div class="seat" name="A2">A2</div>
                 <div class="seat" name="A3">A3</div>
                 <div class="seat" name="A4">A4</div>
@@ -216,11 +216,12 @@
                     <div position-relative>              
                     <div class="position-absolute top-0 start-0">
                         <h1 style="color:white">ABC CINEMA</h1><br>
-                        <h4><a href="#" class="link-light">HOME</a></h4><br>
-                        <h4><a href="#" class="link-light">ABOUT US</a></h4><br>
-                        <h4><a href="#" class="link-light">MOVIES</a></h4><br>
-                        <h4><a href="#" class="link-light">BUY TICKETS</a></h4><br>
-                        <h4><a href="#" class="link-light">CONTACT US</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/Home.jsp" class="link-light">HOME</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/about.jsp" class="link-light">ABOUT US</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/Movie.jsp" class="link-light">MOVIES</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="link-light">BUY TICKETS</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/feedback.jsp" class="link-light">FEEDBACK</a></h4><br>
+                        <h4><a href="http://localhost:8084/ABC_Cinema/contact.jsp" class="link-light">CONTACT US</a></h4><br>
                     </div>
                     </div>
                <br><br><br><br><br><br>

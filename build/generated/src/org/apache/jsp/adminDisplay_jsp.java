@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.PreparedStatement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -52,6 +53,7 @@ public final class adminDisplay_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -61,8 +63,26 @@ public final class adminDisplay_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <link rel=\"stylesheet\"href=\"adminDisplay.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("      \n");
-      out.write("        \n");
+      out.write("        <div class=\"m1\">\n");
+      out.write("                ");
+
+            Connection con = null;
+            PreparedStatement st = null;
+            ResultSet rs = null;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql = "SELECT * FROM nowshowing";
+                st = con.prepareStatement(sql);
+                rs = st.executeQuery();
+                while(rs.next()){
+                    int id = rs.getInt("id");
+                    String mname = rs.getString("moviename");
+                    String hours = rs.getString("hours");
+                    String pic = rs.getString("image");
+
+        
+      out.write("\n");
       out.write("         <nav class=\"navbar fixed-top\"style=\"height:11%\">\n");
       out.write("  <div class=\"container-fluid\">\n");
       out.write("   \n");
@@ -97,31 +117,27 @@ public final class adminDisplay_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("     \n");
       out.write("  </div>\n");
       out.write("</nav>\n");
+      out.write("         <div class=\"m2\">\n");
+      out.write("                 ");
+
+                     try{
+            Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql1 = "SELECT * FROM upcoming";
+                st = con.prepareStatement(sql1);
+                rs = st.executeQuery();
+                while(rs.next()){
+                    int upid = rs.getInt("id");
+                    String name = rs.getString("moviename");
+                 
+                  
+
+        
+      out.write("\n");
       out.write("        <br><br><br><br><br><br><br><br>\n");
       out.write("        <section>\n");
       out.write("               <center><h1 style=\"color:white\">Movie Database</h1></center>\n");
-      out.write("            ");
-
-              
-              String driverName="com.mysql.jdbc.Driver";
-              String connectionUrl="jdbc:mysql://loclhost:3306";
-              String dbName="movie";
-              String userId="root";
-              String password="";
-              
-              try
-              {
-              
-              }catch(Exception e)
-              {
-                 out.print(e);
-              }
-              
-              Connection connection=null;
-              Statement statement=null;
-              ResultSet resultSet=null;
-            
-      out.write("\n");
+      out.write("            \n");
       out.write("               <div class=\"nowshowing border border-danger\">\n");
       out.write("                   <h1 style=\"color:white\">Now Showing Movies</h1>\n");
       out.write("                   <center><table  cellpadding=\"5\" cellspacing=\"5\" border=\"1\">\n");
@@ -132,48 +148,24 @@ public final class adminDisplay_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("            <td style=\"color:white\"><b>Movie id</b></td>\n");
       out.write("            <td style=\"color:white\"><b>Movie name</b></td>\n");
       out.write("            <td style=\"color:white\"><b>Hours</b></td>\n");
-      out.write("            <td style=\"color:white\"><b>Image</b></td>\n");
+      out.write("           \n");
       out.write("            </tr>\n");
-      out.write("            ");
-
-              try
-              {
-                connection=DriverManager.getConnection(connectionUrl+dbName,userId,"");
-                statement=connection.createStatement();
-                String sql="select * from nowshowing";
-                
-                resultSet=statement.executeQuery(sql);
-                while(resultSet.next())
-                {
-                   
-      out.write("\n");
       out.write("                   <tr bgcolor=\"#DEB887\">\n");
       out.write("\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("id") );
+      out.write("                    <td style=\"color:black\">");
+      out.print(id);
       out.write("</td>\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("name") );
+      out.write("                    <td style=\"color:black\">");
+      out.print(mname);
       out.write("</td>\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("hours") );
+      out.write("                    <td style=\"color:black\">");
+      out.print(hours);
       out.write("</td>\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("photo") );
-      out.write("</td>\n");
+      out.write("                   \n");
       out.write("              \n");
       out.write("\n");
       out.write("                    </tr>\n");
-      out.write("                    ");
- 
-                } 
-                   
-              }catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
-             
-      out.write("\n");
+      out.write("                    \n");
       out.write("             \n");
       out.write("                       </table></center>\n");
       out.write("             </div>\n");
@@ -188,54 +180,48 @@ public final class adminDisplay_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("            <tr bgcolor=\"#5F0000\">\n");
       out.write("            <td style=\"color:white\"><b>Movie id</b></td>\n");
       out.write("            <td style=\"color:white\"><b>Movie name</b></td>\n");
-      out.write("            <td style=\"color:white\"><b>Image</b></td>\n");
+      out.write("    \n");
       out.write("        \n");
       out.write("            </tr>\n");
-      out.write("            ");
-
-              try
-              {
-                connection=DriverManager.getConnection(connectionUrl+dbName,userId,"");
-                statement=connection.createStatement();
-                String sql="select * from upcoming";
-                
-                resultSet=statement.executeQuery(sql);
-                while(resultSet.next())
-                {
-                   
-      out.write("\n");
+      out.write("           \n");
       out.write("                   <tr bgcolor=\"#DEB887\">\n");
       out.write("\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("id") );
+      out.write("                    <td style=\"color:black\">");
+      out.print(id);
       out.write("</td>\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("name") );
+      out.write("                    <td style=\"color:black\">");
+      out.print(name);
       out.write("</td>\n");
-      out.write("                    <td style=\"color:white\">");
-      out.print(resultSet.getString("photo") );
-      out.write("</td>\n");
+      out.write("             \n");
       out.write("                  \n");
       out.write("              \n");
       out.write("\n");
       out.write("                    </tr>\n");
-      out.write("                    ");
- 
-                } 
-                   
-              }catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
-             
-      out.write("\n");
+      out.write("               \n");
       out.write("             \n");
       out.write("                       </table></center>\n");
       out.write("             </div>\n");
       out.write("        </section>\n");
+      out.write("                    \n");
+      out.write("                ");
+
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } 
+      out.write("\n");
+      out.write("         </div>\n");
       out.write("         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js\" integrity=\"sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js\" integrity=\"sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V\" crossorigin=\"anonymous\"></script>\n");
+      out.write("         ");
+
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } 
+      out.write("\n");
+      out.write("        </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

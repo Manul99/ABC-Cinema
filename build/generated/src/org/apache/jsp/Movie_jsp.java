@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.*;
 
 public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -44,6 +45,7 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -53,7 +55,27 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\"href=\"Movie.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("         <nav class=\"navbar navbar-expand-lg \">\n");
+      out.write("         ");
+
+            Connection con = null;
+            PreparedStatement st = null;
+            ResultSet rs = null;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql = "SELECT * FROM nowshowing";
+                st = con.prepareStatement(sql);
+                rs = st.executeQuery();
+                while(rs.next()){
+                    int id = rs.getInt("id");
+                    String mname = rs.getString("moviename");
+                    String hours = rs.getString("hours");
+                    String pic = rs.getString("image");
+                  
+
+        
+      out.write("\n");
+      out.write("         <nav class=\"navbar fixed-top navbar-expand-lg \">\n");
       out.write("            <div class=\"container-fluid\">\n");
       out.write("             <a class=\"navbar-brand\" href=\"#\">\n");
       out.write("                <img src=\"ABC3.jpg\" alt=\"Logo\" width=60\" height=\"60\" class=\"d-inline-block align-text-top\" font-family=\"\">\n");
@@ -84,17 +106,18 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        \n");
       out.write("                    </form>\n");
       out.write("                     \n");
-      out.write("                     <a class=\"nav-link\" aria-current=\"page\" href=\"#\" style=\"color:white\">SIGN IN</a>\n");
+      out.write("                     \n");
       out.write("                    \n");
       out.write("                  \n");
       out.write("                    \n");
       out.write("            </div>\n");
       out.write("            </div>\n");
       out.write("        </nav>\n");
-      out.write("        <br><br>\n");
+      out.write("        <br><br><br><br><br>\n");
       out.write("        <section>\n");
       out.write("            \n");
       out.write("        <h1 style=\"color:white\">NOW SHOING</h1>\n");
+      out.write("             \n");
       out.write("             <div class=\"row row-cols-1 row-cols-md-6 g-7 justify-content-around\">\n");
       out.write("                \n");
       out.write("                <div class=\"col ps-3 pr-3 \" style=\"padding: 20\">\n");
@@ -102,10 +125,14 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"blackadam.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">BLACK ADAM</h5>\n");
-      out.write("                    <p class=\"card-text\">2H 4min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\"style=\"color:white\">");
+      out.print(mname);
+      out.write("</h5>\n");
+      out.write("                    <p class=\"card-text\"style=\"color:white\">");
+      out.print(hours);
+      out.write("</p>\n");
+      out.write("                    <p class=\"card-text\"style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -113,12 +140,12 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                   <div class=\"col ps-2 pr-3\" style=\"padding: 15\">\n");
       out.write("                <div class=\"card\">\n");
       out.write("                <div class=\"inner\">\n");
-      out.write("                    <img src=\"bla12.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:338px\">\n");
+      out.write("                    <img src=\"bla12.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:334px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">BLACK PANTHER:WAKANDA FOREVER</h5>\n");
-      out.write("                    <p class=\"card-text\">2H 4min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\"style=\"color:white\">BLACK PANTHER:WAKANDA FOREVER</h5>\n");
+      out.write("                    <p class=\"card-text\"style=\"color:white\">2H 4min</p>\n");
+      out.write("                    <p class=\"card-text\"style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -128,10 +155,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"violent.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">VIOLENT NIGHT</h5>\n");
-      out.write("                    <p class=\"card-text\">1H 40min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\" style=\"color:white\">VIOLENT NIGHT</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">1H 40min</p>\n");
+      out.write("                    <p class=\"card-text\"style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -141,10 +168,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"strange.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">STRANGE WORLD</h5>\n");
-      out.write("                    <p class=\"card-text\">1H 40min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\" style=\"color:white\">STRANGE WORLD</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">1H 40min</p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -154,10 +181,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"Devotion.jpg\" class=\"card-img-top mh-30\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">DEVOTION</h5>\n");
-      out.write("                    <p class=\"card-text\">2H 4min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\" style=\"color:white\">DEVOTION</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">2H 4min</p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -171,10 +198,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"action.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\" style=\"padding: 15\">\n");
-      out.write("                    <h5 class=\"card-title\">AN ACTION HERO</h5>\n");
-      out.write("                    <p class=\"card-text\">2H </p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\" style=\"padding: 15\">\n");
+      out.write("                    <h5 class=\"card-title\"style=\"color:white\">AN ACTION HERO</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">2H </p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -184,10 +211,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"drishyam2.png\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:347px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">DRISHYAM 2</h5>\n");
-      out.write("                    <p class=\"card-text\">2H 30min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\" style=\"color:white\">DRISHYAM 2</h5>\n");
+      out.write("                    <p class=\"card-text\"style=\"color:white\">2H 30min</p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -197,10 +224,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"jurasic.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">JURASIC WORLD:DOMINION</h5>\n");
-      out.write("                    <p class=\"card-text\">2H 40min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\"style=\"color:white\">JURASIC WORLD:DOMINION</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">2H 40min</p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -208,12 +235,12 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                   <div class=\"col ps-3 pr-5\" style=\"padding: 15\">\n");
       out.write("                <div class=\"card\">\n");
       out.write("                <div class=\"inner\">\n");
-      out.write("                    <img src=\"dance.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:345px\">\n");
+      out.write("                    <img src=\"dance.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:337px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">I WANNA DANCE WITH SOMEBODY</h5>\n");
-      out.write("                    <p class=\"card-text\">2H 10min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\" style=\"color:white\">I WANNA DANCE WITH SOMEBODY</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">2H 10min</p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -223,10 +250,10 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"strange3d.png\" class=\"card-img-top mh-30\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
-      out.write("                    <h5 class=\"card-title\">STRANGE WORLD(3D)</h5>\n");
-      out.write("                    <p class=\"card-text\">1H 40min</p>\n");
-      out.write("                    <p class=\"card-text\">NOW SCREENING</p>\n");
+      out.write("                <div class=\"card-body bg-dark\">\n");
+      out.write("                    <h5 class=\"card-title\" style=\"color:white\">STRANGE WORLD(3D)</h5>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">1H 40min</p>\n");
+      out.write("                    <p class=\"card-text\" style=\"color:white\">NOW SCREENING</p>\n");
       out.write("                        <a href=\"\" class=\"btn btn-primary\">BUY TICKETS</a>\n");
       out.write("                </div>\n");
       out.write("                </div>\n");
@@ -243,7 +270,7 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"Avatar.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:375px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
+      out.write("                <div class=\"card card-body bg-primary\">\n");
       out.write("                    <h5 class=\"card-title\">AVATAR:THE WAY OF WATER</h5>\n");
       out.write("                    <p class=\"card-text\">IN CINEMAS 16 TH DECEMBER</p>\n");
       out.write("                   \n");
@@ -255,7 +282,7 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"babylon.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:375px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
+      out.write("                <div class=\"card-body bg-primary\">\n");
       out.write("                    <h5 class=\"card-title\">BABYLON</h5>\n");
       out.write("                    <p class=\"card-text\">IN CINEMAS 7TH JANUARY</p>\n");
       out.write("                </div>\n");
@@ -266,7 +293,7 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"quantam.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:375px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
+      out.write("                <div class=\"card-body bg-primary\">\n");
       out.write("                    <h5 class=\"card-title\">QUANTUMANIA</h5>\n");
       out.write("                     <p class=\"card-text\">IN CINEMAS 17TH FEBRUARY</p>\n");
       out.write("                </div>\n");
@@ -277,7 +304,7 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"puss.jpg\" class=\"card-img-top mh-25\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
+      out.write("                <div class=\"card-body bg-primary\">\n");
       out.write("                    <h5 class=\"card-title\">PUSS IN BOOT: THE LAST WISH</h5>\n");
       out.write("                       <p class=\"card-text\">IN CINEMAS 16TH DECEMBER</p>\n");
       out.write("                </div>\n");
@@ -288,7 +315,7 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"inner\">\n");
       out.write("                    <img src=\"operation.jpg\" class=\"card-img-top mh-30\" alt=\"...\" style=\"height:350px\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"card-body bg-secondary\">\n");
+      out.write("                <div class=\"card-body bg-primary\">\n");
       out.write("                    <h5 class=\"card-title\">OPERATION FORTUNE RUSE DE GUERRE</h5>\n");
       out.write("                    <p class=\"card-text\">IN CINEMAS 6TH JANUARY</p>\n");
       out.write("                </div>\n");
@@ -329,9 +356,9 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <h1 style=\"color:white\">ABC CINEMA</h1><br>\n");
       out.write("                        <h4><a href=\"#\" class=\"link-light\">HOME</a></h4><br>\n");
       out.write("                        <h4><a href=\"#\" class=\"link-light\">ABOUT US</a></h4><br>\n");
-      out.write("                        <h4><a href=\"#\" class=\"link-light\">OFFERS</a></h4><br>\n");
       out.write("                        <h4><a href=\"#\" class=\"link-light\">MOVIES</a></h4><br>\n");
       out.write("                        <h4><a href=\"#\" class=\"link-light\">BUY TICKETS</a></h4><br>\n");
+      out.write("                        <h4><a href=\"#\" class=\"link-light\">FEEDBACK</a></h4><br>\n");
       out.write("                        <h4><a href=\"#\" class=\"link-light\">CONTACT US</a></h4><br>\n");
       out.write("                    </div>\n");
       out.write("                    </div>\n");
@@ -349,6 +376,13 @@ public final class Movie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js\" integrity=\"sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js\" integrity=\"sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V\" crossorigin=\"anonymous\"></script>\n");
+      out.write("         ");
+
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } 
+      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

@@ -223,7 +223,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("   <div class=\"col ps-7\">\n");
       out.write("    <div class=\"card\">\n");
       out.write("        <div class=\"inner\">\n");
-      out.write("            <img src=\"operation.jpg\" class=\"card-img-top mw-10\" alt=\"...\" style=\"height:460px\">\n");
+      out.write("            <img src=\"operation.jpg\" class=\"card-img-top mw-10\" alt=\"...\" style=\"height:455px\">\n");
       out.write("        </div>\n");
       out.write("      <div class=\"card-body bg-primary\">\n");
       out.write("            <h5 class=\"card-title\">OEPRATION FORTUNE RUSE DE GUERRE</h5>\n");

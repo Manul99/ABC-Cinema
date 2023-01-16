@@ -45,7 +45,7 @@
                         
                     </form>
                      
-                     <a class="nav-link" aria-current="page" href="#" style="color:white">SIGN IN</a>
+                     
                     
                   
                     
@@ -55,27 +55,29 @@
         <div class="container border border-danger">
             <br>
             <center><h1 style="color:white">Drop us a feedback</h1></center><br>
-            <form action="" method="post">
+            <form action="feedback" method="post" >
             <center><table>
             <tr>
-                <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" Your name"></td>
+                <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" Your name" name="name"></td>
                 <td></td>
-                <td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email"></td>
+                <td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email" name="email"></td>
             </tr>
             <tr>
-                <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your mobile number"></td>
+                <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your mobile number" name="mnumber"></td>
                 <td></td><br>
                 <td style="color:white">Did you  satisfy with our services?<br>
-                    <label style="color:white"> Yes</label><input type="radio"value="radio"><label style="color:white">No</label><input type="radio"value="radio">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Yes or no" name="satisfy">
                 </td>
                 
             </tr>
            
                 </table></center>
             <br><br>
-            <center> <textarea rows="5" cols="80">Enter your suggestion</textarea></center><br>
+            <center> <textarea rows="5" cols="80" name="suggest">Enter your suggestion</textarea></center><br>
             <center> <button type="submit" class="btn btn-danger">Submit</button></center>
             </form>
+            
+        
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
