@@ -27,7 +27,7 @@ table,th,td
 {
   position: absolute;
   width: 400px;
-  height: 280px;
+  height: 100%;
   left:300px;
   top: 250px;
   
@@ -40,7 +40,7 @@ table,th,td
 
   position: absolute;
   width: 400px;
-  height: 280px;
+  height: 580px;
   left:1199px;
   top: 250px;
   

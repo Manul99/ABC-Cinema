@@ -20,23 +20,7 @@
     </head>
     <body>
         <div class="m1">
-                <%
-            Connection con = null;
-            PreparedStatement st = null;
-            ResultSet rs = null;
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
-                String sql = "SELECT * FROM nowshowing";
-                st = con.prepareStatement(sql);
-                rs = st.executeQuery();
-                while(rs.next()){
-                    int id = rs.getInt("id");
-                    String mname = rs.getString("moviename");
-                    String hours = rs.getString("hours");
-                    String pic = rs.getString("image");
-
-        %>
+      
          <nav class="navbar fixed-top"style="height:11%">
   <div class="container-fluid">
    
@@ -75,7 +59,72 @@
   </div>
 </nav>
          <div class="m2">
+      
+        <br><br><br><br><br><br><br><br>
+        <section>
+               <center><h1 style="color:white">Movie Database</h1></center>
+       
+               
+               <div class="nowshowing border border-danger h-auto">
+                   <h1 style="color:white">Now Showing Movies</h1>
+                   <center><table  cellpadding="5" cellspacing="5" border="1">
+                  <tr bgcolor="#5F0000">
+                  <td style="color:white"><b>Movie id</b></td>
+                  <td style="color:white"><b>Movie name</b></td>
+                  <td style="color:white"><b>Hours</b></td>
+           
+            </tr>
+            <tr>
+               <%
+            Connection con = null;
+            PreparedStatement st = null;
+            ResultSet rs = null;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql = "SELECT * FROM nowshowing";
+                st = con.prepareStatement(sql);
+                rs = st.executeQuery();
+                while(rs.next()){
+                    int id = rs.getInt("id");
+                    String mname = rs.getString("moviename");
+                    String hours = rs.getString("hours");
+                    String pic = rs.getString("image");
+
+        %>
+            </tr>
+          
+                   <tr bgcolor="#DEB887">
+
+                    <td style="color:black"><%=id%></td>
+                    <td style="color:black"><%=mname%></td>
+                    <td style="color:black"><%=hours%></td>
+                   
+            
                  <%
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } %>
+                    </tr>
+          
+                       </table></center>
+          
+             </div>
+        
+               <br><br>
+         
+                     <div class="upcoming border border-danger h-auto">
+                   <h1 style="color:white">Upcoming  Movies</h1>
+                   <center> <table  cellpadding="5" cellspacing="5" border="1">
+                       <tr bgcolor="#5F0000">
+                        <td style="color:white"><b>Movie id</b></td>
+                        <td style="color:white"><b>Movie name</b></td>
+    
+        
+            </tr>
+            <tr>
+                   <%
                      try{
             Class.forName("com.mysql.jdbc.Driver");
                 con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
@@ -89,57 +138,21 @@
                   
 
         %>
-        <br><br><br><br><br><br><br><br>
-        <section>
-               <center><h1 style="color:white">Movie Database</h1></center>
-            
-               <div class="nowshowing border border-danger">
-                   <h1 style="color:white">Now Showing Movies</h1>
-                   <center><table  cellpadding="5" cellspacing="5" border="1">
-            <tr>
-
-            </tr>
-            <tr bgcolor="#5F0000">
-            <td style="color:white"><b>Movie id</b></td>
-            <td style="color:white"><b>Movie name</b></td>
-            <td style="color:white"><b>Hours</b></td>
-           
-            </tr>
-                   <tr bgcolor="#DEB887">
-
-                    <td style="color:black"><%=id%></td>
-                    <td style="color:black"><%=mname%></td>
-                    <td style="color:black"><%=hours%></td>
-                   
-              
-
-                    </tr>
-                    
-             
-                       </table></center>
-             </div>
-               <br><br>
-               
-                     <div class="upcoming border border-danger">
-                   <h1 style="color:white">Upcoming  Movies</h1>
-                   <center> <table  cellpadding="5" cellspacing="5" border="1">
-            <tr>
-
-            </tr>
-            <tr bgcolor="#5F0000">
-            <td style="color:white"><b>Movie id</b></td>
-            <td style="color:white"><b>Movie name</b></td>
-    
         
             </tr>
+        
            
                    <tr bgcolor="#DEB887">
 
-                    <td style="color:black"><%=id%></td>
+                    <td style="color:black"><%=upid%></td>
                     <td style="color:black"><%=name%></td>
              
                   
-              
+                             <%
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } %>
 
                     </tr>
                
@@ -147,21 +160,14 @@
                        </table></center>
              </div>
         </section>
-                    
-                <%
-                }
-            } catch (Exception e) {
-                out.println(e);
-            } %>
+          
+          
          </div>
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-         <%
-                }
-            } catch (Exception e) {
-                out.println(e);
-            } %>
+        
         </div>
+          
     </body>
 </html>
