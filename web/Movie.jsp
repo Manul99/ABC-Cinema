@@ -15,24 +15,7 @@
         <link rel="stylesheet"href="Movie.css">
     </head>
     <body>
-         <%
-            Connection con = null;
-            PreparedStatement st = null;
-            ResultSet rs = null;
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
-                String sql = "SELECT * FROM nowshowing";
-                st = con.prepareStatement(sql);
-                rs = st.executeQuery();
-                while(rs.next()){
-                    int id = rs.getInt("id");
-                    String mname = rs.getString("moviename");
-                    String hours = rs.getString("hours");
-                    String pic = rs.getString("image");
-                  
-
-        %>
+     
          <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
@@ -63,23 +46,38 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         
                     </form>
-                     
-                     
-                    
-                  
-                    
+                      
             </div>
             </div>
         </nav>
+                         <%
+            Connection con = null;
+            PreparedStatement st = null;
+            ResultSet rs = null;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql = "SELECT * FROM nowshowing";
+                st = con.prepareStatement(sql);
+                rs = st.executeQuery();
+                while(rs.next()){
+                    int id = rs.getInt("id");
+                    String mname = rs.getString("moviename");
+                    String hours = rs.getString("hours");
+                    String pic = rs.getString("image");
+                  
+
+        %>
         <br><br><br><br><br>
         <section>
+        
             
         <h1 style="color:white">NOW SHOING</h1>
-             
+    
             <!--Data retreive part added  to this-->
-            
+           
              <div class="row row-cols-1 row-cols-md-6 g-7 justify-content-around">
-                
+                 <div class="container">
                 <div class="col ps-3 pr-3 " style="padding: 20">
                 <div class="card">
                 <div class="inner">
@@ -93,14 +91,17 @@
                 </div>
                 </div>
                 </div>
+                 </div>
+                    <!--
+                   
                    <div class="col ps-2 pr-3" style="padding: 15">
                 <div class="card">
                 <div class="inner">
                     <img src="bla12.jpg" class="card-img-top mh-25" alt="..." style="height:334px">
                 </div>
                 <div class="card-body bg-dark">
-                    <h5 class="card-title"style="color:white">BLACK PANTHER:WAKANDA FOREVER</h5>
-                    <p class="card-text"style="color:white">2H 4min</p>
+                    <h5 class="card-title"style="color:white"></h5>
+                    <p class="card-text"style="color:white"></p>
                     <p class="card-text"style="color:white">NOW SCREENING</p>
                         <a href="http://localhost:8084/ABC_Cinema/PickaMovie.jsp" class="btn btn-primary">BUY TICKETS</a>
                 </div>
@@ -214,10 +215,34 @@
                 </div>
                 </div>
                 </div>
+                    -->
+         
              </div>
+         
         </section>
+                           <%
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } %> 
         <br><br><br><!-- *******************************************************************************************************-->
         <section>
+            
+         <%
+           
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql = "SELECT * FROM upcoming";
+                st = con.prepareStatement(sql);
+                rs = st.executeQuery();
+                while(rs.next()){
+                    int id = rs.getInt("id");
+                    String movie = rs.getString("moviename");
+                    String image = rs.getString("image");
+                  
+
+        %>
             <h1 style="color:white">UPCOMING</h1>
              <div class="row row-cols-1 row-cols-md-6 g-7 justify-content-around">
                 
@@ -227,12 +252,13 @@
                     <img src="Avatar.jpg" class="card-img-top mh-25" alt="..." style="height:375px">
                 </div>
                 <div class="card card-body bg-primary">
-                    <h5 class="card-title">AVATAR:THE WAY OF WATER</h5>
+                    <h5 class="card-title"><%=movie%></h5>
                     <p class="card-text">IN CINEMAS 16 TH DECEMBER</p>
                    
                 </div>
                 </div>
                 </div>
+                    <!--
                    <div class="col ps-2 pr-3" style="padding: 15">
                 <div class="card">
                 <div class="inner">
@@ -277,11 +303,16 @@
                 </div>
                 </div>
                 </div>
-                 
+                 -->
              </div>
+                 <br><br>
+              <%
+                }
+            } catch (Exception e) {
+                out.println(e);
+            } %>
         </section>
-        <br><br>
-        
+         
        <footer>
         
                    <div class="d-flex justify-content-lg-end" style="margin:17px">
@@ -332,10 +363,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-         <%
-                }
-            } catch (Exception e) {
-                out.println(e);
-            } %>
+      
     </body>
 </html>

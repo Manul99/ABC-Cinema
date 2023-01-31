@@ -106,13 +106,13 @@
                     
                     <tr>
                     
-                        <td class="heading">Show time</td>
+                        <td class="heading">Date</td>
                         <td></td>
                         <td class="text"><%out.print(""+ck[2].getValue());%></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="heading">Date</td>
+                        <td class="heading">Time</td>
                         <td></td>
                         <td class="text"><%out.print(""+ck[3].getValue());%></td>
                     </tr>
