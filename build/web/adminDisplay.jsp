@@ -72,6 +72,7 @@
                   <td style="color:white"><b>Movie id</b></td>
                   <td style="color:white"><b>Movie name</b></td>
                   <td style="color:white"><b>Hours</b></td>
+                   
            
             </tr>
             <tr>
@@ -89,7 +90,7 @@
                     int id = rs.getInt("id");
                     String mname = rs.getString("moviename");
                     String hours = rs.getString("hours");
-                    String pic = rs.getString("image");
+                    
 
         %>
             </tr>
@@ -99,6 +100,7 @@
                     <td style="color:black"><%=id%></td>
                     <td style="color:black"><%=mname%></td>
                     <td style="color:black"><%=hours%></td>
+                    
                    
             
                  <%

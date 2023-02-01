@@ -142,28 +142,7 @@
         </style>
     </head>
     <body>
-         <%
-            Connection con = null;
-            PreparedStatement st = null;
-            ResultSet rs = null;
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
-                String sql = "SELECT * FROM feedback";
-                st = con.prepareStatement(sql);
-                rs = st.executeQuery();
-                while(rs.next()){
-                   
-                    String name= rs.getString("name");
-                    String email = rs.getString("email");
-                    String mobile = rs.getString("mobileno");
-                    String satisfy = rs.getString("satisfy");
-                    String suggest=rs.getString("suggestion");
-                    
-                    
-
-
-        %>
+    
         <br><br><br><br><br>
          <nav class="navbar fixed-top"style="height:11%">
   <div class="container-fluid">
@@ -209,8 +188,30 @@
             <section id="test">
                 <div class="test-heading">
                     <span style="color:white">Feedback</span>
-                    <h1>Client Says</h1>
+                    <h1>Customer Says</h1>
                 </div>
+                     <%
+            Connection con = null;
+            PreparedStatement st = null;
+            ResultSet rs = null;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/movie","root","");
+                String sql = "SELECT * FROM feedback";
+                st = con.prepareStatement(sql);
+                rs = st.executeQuery();
+                while(rs.next()){
+                   
+                    String name= rs.getString("name");
+                    String email = rs.getString("email");
+                    String mobile = rs.getString("mobileno");
+                    String satisfy = rs.getString("satisfy");
+                    String suggest=rs.getString("suggestion");
+                    
+                    
+
+
+        %>
                 <div class="test-box-container">
                     <div class="test-box">
                         <div class="box-top">

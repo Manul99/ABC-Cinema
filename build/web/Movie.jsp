@@ -50,7 +50,13 @@
             </div>
             </div>
         </nav>
-                         <%
+     
+        <br><br><br><br><br>
+        <section>
+        
+            
+        <h1 style="color:white">NOW SHOING</h1>
+                        <%
             Connection con = null;
             PreparedStatement st = null;
             ResultSet rs = null;
@@ -68,15 +74,9 @@
                   
 
         %>
-        <br><br><br><br><br>
-        <section>
-        
-            
-        <h1 style="color:white">NOW SHOING</h1>
-    
             <!--Data retreive part added  to this-->
            
-             <div class="row row-cols-1 row-cols-md-6 g-7 justify-content-around">
+             <div class="row row-cols-1 row-cols-md-5 g-7 justify-content-around d-inline">
                  <div class="container">
                 <div class="col ps-3 pr-3 " style="padding: 20">
                 <div class="card">
@@ -228,7 +228,9 @@
         <br><br><br><!-- *******************************************************************************************************-->
         <section>
             
-         <%
+      
+            <h1 style="color:white">UPCOMING</h1>
+               <%
            
             try {
                 Class.forName("com.mysql.jdbc.Driver");
@@ -243,9 +245,8 @@
                   
 
         %>
-            <h1 style="color:white">UPCOMING</h1>
-             <div class="row row-cols-1 row-cols-md-6 g-7 justify-content-around">
-                
+             <div class="row row-cols-1 row-cols-md-5 g-7 justify-content-around d-inline">
+                <div class="upcontainer">
                 <div class="col ps-3 pr-3 " style="padding: 20">
                 <div class="card">
                 <div class="inner">
@@ -255,6 +256,7 @@
                     <h5 class="card-title"><%=movie%></h5>
                     <p class="card-text">IN CINEMAS 16 TH DECEMBER</p>
                    
+                </div>
                 </div>
                 </div>
                 </div>
@@ -306,13 +308,13 @@
                  -->
              </div>
                  <br><br>
+         
+        </section>
               <%
                 }
             } catch (Exception e) {
                 out.println(e);
             } %>
-        </section>
-         
        <footer>
         
                    <div class="d-flex justify-content-lg-end" style="margin:17px">
